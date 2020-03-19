@@ -6,10 +6,10 @@ from newsapi import NewsApiClient
 def index(request):
     newsapi = NewsApiClient(api_key='93ec2510842647889c3913445b754c83')
     # /v2/top-headlines
-    top_headlines = newsapi.get_top_headlines(sources='bbc-news,the-verge',
-                                            category='health',
-                                            language='en',
-                                            country='us')
+    top_headlines = newsapi.get_top_headlines(sources='bbc-news,the-verge')
+                                            # category='health',
+                                            # language='en',
+                                            # country='us')
     
     all_articles = top_headlines['articles']
 
