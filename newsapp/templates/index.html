@@ -5,29 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>News</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+    <style>
+        body {
+            font-family: "Karma", sans-serif;
+        }
+        h1{
+            margin: 20px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            padding:20px;
+            width: 800px;
+            margin: auto;
+        }
+        .article{
+            border: solid 1px;
+            margin: 0 0 1in 0;
+
+        }
+        .article img{
+            width: 100%;
+            height: auto;
+        }
+        .article h3, .article p{
+            margin: .2in;
+
+        }
+    </style>
 </head>
 <body>
     
-    <div class="jumbotron" style="color:black">
+    <div style="color:black">
         <h1>
             Latest News
         </h1>
     </div>
     
     <div class="container">
-            {% for new, des, i in mylist %}
-            <img src="{{i}}" alt="">
-            <h3>News:</h3> {{new}}
-            {{value | linebreaks}}
-         
-            <h4>Description:</h4> {{des}}
-            {{value | linebreaks}}
-         
-         
-         
-            {% endfor %}
-              
-     </div>
+        {% for new, des, i in mylist %}
+            <div class="article">
+                <img src="{{i}}" alt="">
+                <h3>{{new}}</h3>
+            
+                <p>{{des}}</p> 
+            </div>
+        {% endfor %}            
+    </div>
 </body>
 </html>
