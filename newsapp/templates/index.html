@@ -1,3 +1,7 @@
+{% extends "base.html" %}
+{% block body %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,14 +51,17 @@
     </div>
     
     <div class="container">
-        {% for new, des, i in mylist %}
+        {% for new, des, url, i in mylist %}
             <div class="article">
                 <img src="{{i}}" alt="">
                 <h3>{{new}}</h3>
             
-                <p>{{des}}</p> 
+                <p>{{des}}</p>
+                <a href="{{url}}" target="_blank">read more</a>
             </div>
         {% endfor %}            
     </div>
 </body>
 </html>
+
+{% endblock %}
