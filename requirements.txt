@@ -9,7 +9,7 @@ Click==7.0
 colorama==0.4.1
 distlib==0.3.0
 Django==3.0.4
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 dominate==2.4.0
 filelock==3.0.12
 Flask==1.1.1
